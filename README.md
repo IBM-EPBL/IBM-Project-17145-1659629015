@@ -46,3 +46,8 @@ program for innovation, employability and entrepreneurship.
 - Achieve higher accuracy.
 - Gain domain knowledge and deploy solution properly.
 
+## Team Members : 
+leader - ![Prathy](https://www.linkedin.com/in/prathy-p-395293228/)
+member - Vadivel Karthick
+member - Durai Prabhakar
+member - Mohammed Afridi
