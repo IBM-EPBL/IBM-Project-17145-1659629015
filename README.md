@@ -19,11 +19,11 @@ program for innovation, employability and entrepreneurship.
 - This project main motive is to provide more insights and perform perfect data science task.
 
 ## Project workflow : ![](https://im4.ezgif.com/tmp/ezgif-4-0adc3a9409.webp)
-    Applicant Credibility Prediction for Loan Approval
-          * Project Progress
-              * [Project planning] - [https://github.com/IBM-EPBL/IBM-Project-17145-1659629015/blob/main/Project%20Planning/project-planning-for-applicant-loan-credibility.pdf]
-              * [Empathy Map] - [https://github.com/IBM-EPBL/IBM-Project-17145-1659629015/blob/main/Project%20Planning/empathy-map.pdf]
-              * [Brainstrom Map] - [https://github.com/IBM-EPBL/IBM-Project-17145-1659629015/blob/main/Project%20Planning/brainstrom-map.pdf]
+### Applicant Credibility Prediction for Loan Approval
+* Project Progress
+* [Project planning] - [https://github.com/IBM-EPBL/IBM-Project-17145-1659629015/blob/main/Project%20Planning/project-planning-for-applicant-loan-credibility.pdf]
+* [Empathy Map] - [https://github.com/IBM-EPBL/IBM-Project-17145-1659629015/blob/main/Project%20Planning/empathy-map.pdf]
+* [Brainstrom Map] - [https://github.com/IBM-EPBL/IBM-Project-17145-1659629015/blob/main/Project%20Planning/brainstrom-map.pdf]
 
 ## Project tasks ::zap:
 1. Get quality dataset - Data plays a major role in data science project
