@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Contact</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="static/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    
+   <a href="home.html"><button class="but">Back</button></a>
+    <div class="contact-section">
+        <div class="contact-info">
+          <div>Address  :  Vellore,Tamilnadu,India</div>
+          <div>Email  :  Bank@gmail.com</div>
+          <div>Mobile No  :  9000033456</div>
+          <div>Working Hours  :  Mon - Fri 10:00 AM to 4:30 PM</div>
+        </div>
+      <div class="box">
+        <div class="title">
+          <h1>Contact Us</h1><br>
+          <h2>We are ready</h2>
+        </div>
+        <form action="" name="contact-us">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required><br>
+            <input type="text" name="phone" class="form-control" id="phone" placeholder="Your mobile Number" required><br>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Your Email id" required><br>
+          <textarea name="message" class="form-control" id="message" rows="4" placeholder="Message"></textarea><br>
+            <input type="submit" name="" class="form-control submit" value="SEND">
+        </form>
+      </div>
+      </div>
+      <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyE5Kll2s6QbBSUMinwFcLiWih1xpz6px9YqCsQTYOBbYt0I82dxixhN1uT1bX4fRPMbA/exec'
+      const form = document.forms['contact-us']
+      
+      form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+      form.reset()
+          alert('Success!')
+        })
+      </script>
+      </body>
+      </html>

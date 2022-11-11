@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:10px;
+    box-sizing: border-box;
+}
+body{
+    background-color:white;
+}
+.container{
+    width: auto;
+    margin: auto;
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: rgb(201, 27, 114);
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 50px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+ul{
+    display: flex;
+    list-style-type: none;
+}
+.nav-bar{
+background-color: whitesmoke;
+width: 60%;
+margin: 10px auto;
+border-radius: 20px;
+box-shadow: 2px 2px 2px rgb(148, 11, 114);
+}
+.nav-bar li{
+    padding: 15px;
+}
+.nav-bar a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px 20px;
+    color: rgb(164, 31, 146);
+    border-bottom: 3px solid transparent;
+}
+.nav-bar a:hover{
+    color: red;
+    transition-duration: 0.5s;
+    border-bottom: 5px solid red;
+}
+.nav-bar a:focus{
+    color: red;
+    border-bottom: 5px solid red;
+}
+.welcome-text{
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: auto;
+    text-align: left;
+
+}
+.welcome-text h1{
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.welcome-text p{
+    text-align: left;
+    color: rgb(189, 163, 226);
+    text-transform: none;
+    font-size: 20px;
+}
+
+.welcome-text h1{
+    color:blue;
+}
