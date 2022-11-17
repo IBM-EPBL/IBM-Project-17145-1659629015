@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Loan approva status</title>
+    <link rel="stylesheet" href="static/approve.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <h1>LOAN APPROVAL STATUS</h1>
+    <h2>{{prediction_text}}</h2>
+    <img src="static/images/approve.jpg" width="150px" height="150px">
+    <h3>Please provide your feedback</h3>
+    <div class="container">
+
+      <div class="post">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">EDIT</div>
+      </div>
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="" name="rating">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="5" id="name" name="name" placeholder="Enter name"></textarea>
+          </div>
+          <div class="textarea">
+            <textarea cols="30" id="message" name="message" placeholder="Describe your experience.."></textarea></div>
+            <div class="btn">
+              <button type="submit">Post</button>
+        </div>
+          </div>
+          </div>
+        </form>
+        <script>
+          const scriptURL ='https://script.google.com/macros/s/AKfycbwZ_9addvPIcvu2Zpo2nxMo0sqzkbEb4mQroMYe-hx3zii-tSa0c3J2x_Db_I6hTLqQxw/exec'
+          const form = document.forms['rating']
+          form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+          form.reset()
+              alert('Thanks for Rating!')
+            })  
+          </script>
+  </body>
+</html>

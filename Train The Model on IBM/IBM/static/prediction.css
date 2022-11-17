@@ -1,0 +1,63 @@
+body{
+    margin:100px;
+    
+}
+
+.form-label{
+    color:rgb(235, 27, 97);
+    font-weight: bolder;
+    font-size: 18px;
+    
+}
+.Heading{
+    color:rgb(235, 27, 97);
+    font-size: 30px;
+    font-weight:bolder;
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    
+}
+.fill{
+    color: black;
+    font-size: 20px;
+    font-weight:15px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+#but{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.mb-3{
+    width:85%;
+    padding-left:15%;
+}
+.form-control{
+    margin:10px 2px;
+    outline: solid 1px lightblue;
+}
+.form-select{
+    margin:10px 2px;
+    outline: solid 1px lightblue;
+}
+.but{
+    background-color:rgb(235, 27, 97); 
+    color:white;
+    border-radius: 10px;
+    width:100px;
+    border-color:white ;
+    height:50px;
+    padding: 10px;
+}
+    
+#back{
+    background-color:rgb(235, 27, 97); 
+    color:white;
+    border-radius: 10px;
+    width:100px;
+    
+
+}
