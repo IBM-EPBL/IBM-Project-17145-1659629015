@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: grey;
+  padding: 0 10px;
+}
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 4px 4px 25px #000;
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #264653;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #264653;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background: #264653;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+  text-align: center;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #ffb5a7;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background: #264653;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Predictor App</title>
+</head>
+
+<body>
+
+<br>
+
+<center>
+  <H1 style="color:#264653;"> Bank Loan</H1>
+</center>
+
+<div class="wrapper">
+    <div class="title">
+      Loan Approval Prediction Form
+      <br><br><h2><b>{{prediction_text}}</b></h2>
+    </div>
+    
+    <form action='/predict' method='POST'>
+       
+      <div class="form">
+        
+         <div class="inputfield">
+            <label>Gender</label>
+            <div class="custom_select">
+              <select name="genderBox">
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+         </div> 
+
+         <div class="inputfield">
+            <label>Married</label>
+            <div class="custom_select">
+              <select name="maritalBox">
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+         </div> 
+
+          <div class="inputfield">
+            <label>Dependents</label>
+            <div class="custom_select">
+             <select name="dependents">
+              <option selected disabled hidden>Select</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3+">3</option>
+          </select>
+         </div> 
+         </div>
+
+         <div class="inputfield">
+            <label>Education</label>
+            <div class="custom_select">
+              <select name="educationBox">
+                <option value="">Select</option>
+                <option value="Graduate">Graduate</option>
+                <option value="NonGraduate">Non Graduate</option>
+              </select>
+            </div>
+         </div> 
+
+        <div class="inputfield">
+            <label>Self Employed</label>
+            <div class="custom_select">
+              <select name = "employmentBackground">
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+          <label>Applicant Income (Monthly)</label>
+          <input type="number" class="input" name="applicantIncomeBox" min="0">
+        </div> 
+
+        <div class="inputfield">
+          <label>Co Applicant Income</label>
+          <input type="number" class="input" name="coApplicantIncomeBox" min="0">
+        </div> 
+   
+        <div class="inputfield">
+          <label>Loan  Amount</label>
+          <input type="number" class="input" name="laonAmtBox" min="0">
+        </div> 
+
+        <div class="inputfield">
+            <label>Loan Amount Term</label>
+            <input type="number" class="input" name="laonAmtTermBox" min="0">
+        </div> 
+
+        <div class="inputfield">
+            <label>Credit History</label>
+            <div class="custom_select">
+              <select name = "CHBox">
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+            <label>Property Area</label>
+            <div class="custom_select">
+              <select name = "propertyAreaBox">
+                <option value="">Select</option>
+                <option value="Rural">Rural</option>
+                <option value="SemiUrban">Semi Urban</option>
+                <option value="Urban">Urban</option>
+              </select>
+            </div>
+        </div> 
+        <div class="inputfield">
+        <button type="submit" class="btn">Submit</button>
+        </div>
+        
+       
+      </form>
+    </div>   
+</div>
+
+  
+</body>
+</html>
